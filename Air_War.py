@@ -57,10 +57,10 @@ class PlayerPlane(object):                                                  #自
            temp.draw()
 
     def keyhandle(self,keyValue):                                           #接受键盘信息并移动（上下左右或w s a d）
-        if keyValue=='left':
+        if keyValue=='left' and self.x>=0:
             print("--按下 左键--")
             self.x -= 20
-        elif keyValue=='right':
+        elif keyValue=='right'and self.x<=380:
             print("--按下 右键--")
             self.x += 20
         elif keyValue=='space':
